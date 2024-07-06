@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Your personal AI doctor</title>
+</head>
+<body>
+    <header>
+        <h1>Health Assistant AI</h1>
+    </header>
+    <main>
+        <form action="/submit" method="POST" class="prompt__form">
+            <textarea class="prompt__textarea" name="prompt" placeholder="Enter your problem here"></textarea>
+            <button type="submit" class="prompt__button">Submit</button>
+        </form>
+        {% if message %}
+            <div>
+                <p>{{ message }}</p>
+            </div>
+        {% endif %}
+    </main>
+</body>
+</html>

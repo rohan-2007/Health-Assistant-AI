@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: skyblue;
+}
+
+main {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.prompt__form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: flex-end;
+}
+
+h1 {
+    color: red;
+    margin: 20px 0 50px 20px;
+}
+
+.prompt__textarea {
+    width: 100%;
+    height: 70%;
+    resize: none;
+    font-family: inherit;
+    background-color: lightblue;
+}
+
+.prompt__button {
+    width: fit-content;
+    /* height: 20px; */
+    margin: 10px 0 0 0;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    font-family: inherit;
+}
+
+.prompt__button:hover {
+    cursor: pointer;
+    background-color: lightcoral;
+}
