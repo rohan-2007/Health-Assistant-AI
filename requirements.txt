@@ -2,6 +2,6 @@ flask
 gtts
 google-generativeai
 python-dotenv
-playsound==1.3.0
+playsound==1.2.2
 pandas
 gunicorn
