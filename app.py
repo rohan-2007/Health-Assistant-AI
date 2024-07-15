@@ -16,10 +16,10 @@ def submit():
         if request.form.get("prompt"):
             response = chatbot.chat.send_message(request.form.get("prompt")).text
             response.replace("*", "")
-            sound = gTTS(text=response, lang="en", slow=False)
-            sound.save("response.mp3")
-            playsound("response.mp3")
-            os.remove("response.mp3")
+            # sound = gTTS(text=response, lang="en", slow=False)
+            # sound.save("response.mp3")
+            # playsound("response.mp3")
+            # os.remove("response.mp3")
 
             return render_template("index.html", message=response)
         
