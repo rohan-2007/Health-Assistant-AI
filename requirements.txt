@@ -2,7 +2,5 @@ flask
 gtts
 google-generativeai
 python-dotenv
-vext
-vext.gi
 pandas
 gunicorn
