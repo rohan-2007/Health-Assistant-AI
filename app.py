@@ -1,6 +1,4 @@
 from flask import Flask, render_template, request
-from gtts import gTTS
-from playsound import playsound
 import chatbot
 import os
 
