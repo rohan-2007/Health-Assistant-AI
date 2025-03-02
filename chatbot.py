@@ -3,7 +3,7 @@ import google.generativeai as genai
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
-model = genai.GenerativeModel(model_name="gemini-1.0-pro")
+model = genai.GenerativeModel(model_name="gemini-1.5-flash")
 genai.configure(api_key = GOOGLE_API_KEY)
 
 context = [

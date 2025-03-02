@@ -22,3 +22,6 @@ def submit():
             return render_template("index.html", message=response)
         
         return render_template("index.html")
+
+if __name__ == '__main__':
+    app.run(port=8000)
