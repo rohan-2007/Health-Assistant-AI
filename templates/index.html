@@ -7,19 +7,34 @@
     <title>Your personal AI doctor</title>
 </head>
 <body>
-    <header>
-        <h1>Health Assistant AI</h1>
-    </header>
+    <div id="header-div">
+        <header>
+            <h1>🩺 Health Assistant AI</h1>
+        </header>
+    </div>
     <main>
-        <form action="/submit" method="POST" class="prompt__form">
-            <textarea class="prompt__textarea" name="prompt" placeholder="Enter your problem here"></textarea>
-            <button type="submit" class="prompt__button">Submit</button>
-        </form>
-        {% if message %}
-            <div>
-                <p>{{ message }}</p>
+        <div id="outer-div">
+            <form action="/submit" method="POST" class="prompt__form" id="prompt-form">
+                <textarea class="prompt__textarea" name="prompt" placeholder="Enter your problem here"></textarea>
+                <button type="submit" class="prompt__button">Submit</button>
+            </form>
+            <div id="chat-div">
+                {% if message %}
+                    <p>{{ message }}</p>
+                {% endif %}
             </div>
-        {% endif %}
+        </div>
+        <script>
+            const form = document.getElementById("prompt-form");
+            const textarea = form.querySelector("textarea");
+
+            textarea.addEventListener("keydown", function(event) {
+                if (event.key === "Enter" && !event.shiftKey) {
+                    event.preventDefault();
+                    form.submit();
+                }
+            });
+        </script>
     </main>
 </body>
 </html>

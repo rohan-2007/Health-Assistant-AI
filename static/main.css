@@ -6,28 +6,54 @@
 
 body {
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: skyblue;
+    font-family: 'Arial';
+    /* background-color: skyblue; */
 }
 
 main {
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: 0 auto;
+    margin: 5vh auto;
+}
+
+#outer-div {
+    height: 50vh;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 1vw;
+    width: 50vw;
+    margin: auto;
+}
+
+#chat-div {
+    width: 100%;
+    margin: auto;
+    height: 50%;
+    resize: none;
+    font-family: inherit;
+    /* background-color: lightblue; */
+    border-radius: 5px;
+    border-color: blue;
+    border-width: 5px;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 2vw;
 }
 
 .prompt__form {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     align-items: flex-end;
+    padding: 2vw;
 }
 
 h1 {
-    color: red;
-    margin: 20px 0 50px 20px;
+    color: white;
+    /* margin: 20px 0 50px 20px; */
+    text-align: center;
 }
 
 .prompt__textarea {
@@ -35,14 +61,19 @@ h1 {
     height: 70%;
     resize: none;
     font-family: inherit;
-    background-color: lightblue;
+    /* background-color: lightblue; */
+    border-radius: 5px;
+    border-color: rgb(201, 200, 200);
+    /* align-items: center; */
+    justify-content: center;
+    padding: 5px;
 }
 
 .prompt__button {
     width: fit-content;
     /* height: 20px; */
     margin: 10px 0 0 0;
-    background-color: red;
+    background-color: rgb(3, 169, 114);
     color: white;
     border: none;
     padding: 0.5rem 2rem;
@@ -52,5 +83,18 @@ h1 {
 
 .prompt__button:hover {
     cursor: pointer;
-    background-color: lightcoral;
+    background-color: rgb(64, 176, 138);
+}
+
+#header-div {
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(3, 169, 114);
+    /* width: 100vw; */
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    display: block; */
+    /* height: 10vh; */
+    /* margin: 20px; */
 }
